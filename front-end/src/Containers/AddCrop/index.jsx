@@ -40,7 +40,6 @@ class UserProfile extends Component {
     });
   }
   render(){
-    console.log(this.props.products)
     return (
       <div id="add-your-crop">
         <form onSubmit={this.addCrop}>
@@ -51,7 +50,7 @@ class UserProfile extends Component {
         <h2 id="my-crops-title">My Crops</h2>
         <ul id="my-crop-list">
           {this.props.products.map(product => (
-            <li className="my-crop-item"><h3 className="my-crop-names">{product.name}</h3>, quantity: {product.quantity}</li>
+            <li className="my-crop-item" key={product.id}><h3 className="my-crop-names">{product.name}</h3>, quantity: {product.quantity}</li>
           ))}
         </ul>
       </div>

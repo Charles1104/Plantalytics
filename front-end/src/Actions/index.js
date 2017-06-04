@@ -152,7 +152,7 @@ export const makeRequest = (body) => {
                                 subject: `New request from ${localStorage.username}`,
                                 body:`Hi, You have a new request from ${localStorage.username}. Check "Your quotations" to accept or reject the request`,
                                 Sender:Number(localStorage.id),
-                                Receiver:2,
+                                Receiver: body.supplier,
                                 Request_Id: request[0][0].RequestId
                               }))
       .then( () => {

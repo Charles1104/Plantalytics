@@ -34,6 +34,7 @@ class Inbox extends Component {
   }
 
   render(){
+    console.log(this.props.displayMessages)
     return (
       <div id="messagesFeed">
         <Link to='/myprofile'><p className="profileLink">Profile</p></Link>
